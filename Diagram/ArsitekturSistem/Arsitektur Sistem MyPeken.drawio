@@ -1,0 +1,137 @@
+<mxfile host="app.diagrams.net" scale="1" border="0">
+  <diagram id="arch_mypeken_01" name="Arsitektur Sistem MyPeken">
+    <mxGraphModel dx="960" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="950" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="layer_client" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.3;" vertex="1" parent="1">
+          <mxGeometry x="30" y="24" width="900" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="layer_server" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.3;" vertex="1" parent="1">
+          <mxGeometry x="30" y="244" width="900" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="srv_backend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.3;" vertex="1" parent="layer_server">
+          <mxGeometry x="24" y="40" width="852" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="layer_data" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.3;" vertex="1" parent="1">
+          <mxGeometry x="200" y="544" width="560" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="layer_ext" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.3;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="768" width="900" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_client" value="Client Layer (Web - Next.js / React)" style="text;html=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="layer_client">
+          <mxGeometry x="16" y="10" width="360" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="cli_web" value="Web Application&lt;br&gt;(Pembeli &amp; Penjual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.4;fontFamily=Helvetica;fontSize=12;fontStyle=1;fontColor=#000000;" vertex="1" parent="layer_client">
+          <mxGeometry x="30" y="50" width="230" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="cli_internet" value="Internet / HTTPS" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.4;fontFamily=Helvetica;fontSize=12;fontStyle=1;fontColor=#000000;" vertex="1" parent="layer_client">
+          <mxGeometry x="365" y="54" width="170" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="cli_admin" value="Web Admin Panel&lt;br&gt;(Admin)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.4;fontFamily=Helvetica;fontSize=12;fontStyle=1;fontColor=#000000;" vertex="1" parent="layer_client">
+          <mxGeometry x="640" y="50" width="230" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_server" value="Server Layer (API)" style="text;html=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="layer_server">
+          <mxGeometry x="16" y="10" width="260" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_backend" value="Backend Server (Node.js / Express.js)" style="text;html=1;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontStyle=1;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="srv_backend">
+          <mxGeometry x="16" y="10" width="820" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="srv_ctrl" value="API Controllers &amp; Middleware (REST API, Auth/RBAC, Webhook)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="srv_backend">
+          <mxGeometry x="24" y="42" width="804" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="srv_logic" value="Business Logic &amp; Real-Time (Domain Services, Socket.io, Cron)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="srv_backend">
+          <mxGeometry x="24" y="86" width="804" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="srv_orm" value="Data Access Layer (Prisma ORM &amp; Storage Client)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="srv_backend">
+          <mxGeometry x="24" y="130" width="804" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_data" value="Data Layer" style="text;html=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="layer_data">
+          <mxGeometry x="16" y="10" width="200" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="db_postgres" value="PostgreSQL Database" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.4;fontFamily=Helvetica;fontSize=11;fontStyle=1;fontColor=#000000;" vertex="1" parent="layer_data">
+          <mxGeometry x="50" y="42" width="190" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_pg" value="(Users, Stores, Products, Orders, Escrow, etc.)" style="text;html=1;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="layer_data">
+          <mxGeometry x="16" y="120" width="258" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="db_storage" value="Supabase Storage" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.4;fontFamily=Helvetica;fontSize=11;fontStyle=1;fontColor=#000000;" vertex="1" parent="layer_data">
+          <mxGeometry x="320" y="42" width="190" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_storage" value="(Foto Produk, Dokumen KYC, Bukti Retur, etc.)" style="text;html=1;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="layer_data">
+          <mxGeometry x="286" y="120" width="258" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_ext" value="External Services (Third-Party APIs)" style="text;html=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="layer_ext">
+          <mxGeometry x="16" y="10" width="320" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_midtrans" value="&lt;b&gt;Midtrans&lt;/b&gt;&lt;br&gt;(Payment &amp; Payout)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="24" y="40" width="201" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_biteship" value="&lt;b&gt;Biteship&lt;/b&gt;&lt;br&gt;(Logistik &amp; Resi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="241" y="40" width="201" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_iak" value="&lt;b&gt;IAK&lt;/b&gt;&lt;br&gt;(Biller PPOB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="458" y="40" width="201" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_ai" value="&lt;b&gt;Groq AI&lt;/b&gt;&lt;br&gt;(Asisten Virtual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="675" y="40" width="201" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_maps" value="&lt;b&gt;Google Maps&lt;/b&gt;&lt;br&gt;(Geofencing &amp; LBS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="24" y="98" width="273" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_oauth" value="&lt;b&gt;Google OAuth&lt;/b&gt;&lt;br&gt;(Autentikasi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="313" y="98" width="273" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_otp" value="&lt;b&gt;Fonnte / SMS / Email&lt;/b&gt;&lt;br&gt;(OTP &amp; Notifikasi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#000000;" vertex="1" parent="layer_ext">
+          <mxGeometry x="603" y="98" width="273" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cli_l_req" value="HTTP Request" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=1.6;endArrow=block;endFill=1;endSize=8;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3484;exitDx=0;exitDy=0;entryX=0;entryY=0.32;entryDx=0;entryDy=0;" edge="1" parent="1" source="cli_web" target="cli_internet">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cli_l_res" value="HTTP Response" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=1.6;endArrow=block;endFill=1;endSize=8;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.68;exitDx=0;exitDy=0;entryX=1;entryY=0.6516;entryDx=0;entryDy=0;" edge="1" parent="1" source="cli_internet" target="cli_web">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cli_r_req" value="API Request" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=1.6;endArrow=block;endFill=1;endSize=8;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.3484;exitDx=0;exitDy=0;entryX=1;entryY=0.32;entryDx=0;entryDy=0;" edge="1" parent="1" source="cli_admin" target="cli_internet">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cli_r_res" value="API Response" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=1.6;endArrow=block;endFill=1;endSize=8;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.68;exitDx=0;exitDy=0;entryX=0;entryY=0.6516;entryDx=0;entryDy=0;" edge="1" parent="1" source="cli_internet" target="cli_admin">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c2s_req" value="HTTP / WS Request" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;endSize=9;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.44;exitY=1;exitDx=0;exitDy=0;entryX=0.44;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="layer_client" target="layer_server">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-76" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_s2c_res" value="HTTP / WS Response" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;endSize=9;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.56;exitY=0;exitDx=0;exitDy=0;entryX=0.56;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="layer_server" target="layer_client">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_s2d_req" value="Database Query" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;endSize=9;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.44;exitY=1;exitDx=0;exitDy=0;entryX=0.4036;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="layer_server" target="layer_data">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-64" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d2s_res" value="Database Response" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;endSize=9;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5964;exitY=0;exitDx=0;exitDy=0;entryX=0.56;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="layer_data" target="layer_server">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="72" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_s2e_req" value="API Request" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;endSize=9;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.0944;exitY=1;exitDx=0;exitDy=0;entryX=0.0944;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="layer_server" target="layer_ext">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_e2s_res" value="API Response /&lt;br&gt;Webhook" style="edgeStyle=none;rounded=0;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;endSize=9;startArrow=none;html=1;fontFamily=Helvetica;fontSize=10;fontStyle=0;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.9056;exitY=0;exitDx=0;exitDy=0;entryX=0.9056;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="layer_ext" target="layer_server">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
