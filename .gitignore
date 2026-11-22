@@ -5,3 +5,12 @@ Referensi Dokumen MyPeken/
 # File backup sementara Draw.io
 *.bkp
 .$*
+
+# File bantu konteks, instruksi, & skrip lokal AI Agent
+AGENTS.md
+AGENT.md
+CONTEXT.md
+context.md
+PROMPT_DIAGRAM.md
+CLAUDE.md
+.ai-tools/
